@@ -20,6 +20,8 @@ TARGET_OTA_ASSERT_DEVICE := klte,klteacg,klteatt,kltecan,kltelra,kltetmo,klteub,
 
 BUILD_FINGERPRINT := samsung/kltexx/klte:6.0.1/MMB29M/G900FXXU1CRH1:user/release-keys
 
+KLTE_PATH := device/samsung/klte
+
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_klte_pn547_defconfig
 
@@ -27,8 +29,8 @@ TARGET_KERNEL_CONFIG := lineage_klte_pn547_defconfig
 include $(COMMON_PATH)/fingerprint/board.mk
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8974
-TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/klte/init/init_klte.cpp
+TARGET_INIT_VENDOR_LIB := //$(KLTE_PATH):libinit_klte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_klte
 
 # NFC
 include $(COMMON_PATH)/nfc/pn547/board.mk
