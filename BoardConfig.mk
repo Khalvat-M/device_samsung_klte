@@ -35,8 +35,5 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_klte
 # NFC
 include $(COMMON_PATH)/nfc/pn547/board.mk
 
-# Radio/RIL
-include $(COMMON_PATH)/radio/single/board.mk
-
 # inherit from the proprietary version
 -include vendor/samsung/klte/BoardConfigVendor.mk
