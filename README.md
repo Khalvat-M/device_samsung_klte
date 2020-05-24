@@ -1,6 +1,4 @@
-Copyright 2014 - The CyanogenMod Project
-
-Copyright 2017 - The LineageOS Project
+Copyright 2020 - The Khalvat-M project
 
 Device configuration for Samsung Galaxy S5 Unified variants (SM-G900F, SM-G900M, SM-G900R4, SM-G900R7, SM-G900T, SM-G900V, SM-G900W8, SM-S902L).
 ========================================
@@ -21,4 +19,36 @@ Rear Camera  | 16 MP, f/2.2, 31mm, phase detection autofocus, LED flash
 Front Camera | 2 MP, f/2.4, 22mm
 Release Date | February 2014
 
-![Galaxy S5](http://cdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s5-g900f-1.jpg "Galaxy S5")
+![Galaxy S5](https://github.com/Khalvat-M/android_device_samsung_klte/blob/10.0/information/klte.gif)
+
+
+# For building Android Q
+### create `.repo/local_manifests/roomservice.xml` with the following content:
+
+***
+ 
+        <?xml version="1.0" encoding="UTF-8"?>
+           <manifest>
+        
+           <remote  name="khalvat"
+              fetch="https://github.com/Khalvat-M"
+              revision="10.0" />
+
+           <remote  name="linos"
+              fetch="https://github.com/LineageOS"
+              revision="lineage-17.1" />
+
+              <!--LineageOS -->
+              <project name="android_hardware_samsung" path="hardware/samsung" remote="linos" />
+        
+              <!--Device -->
+              <project name="android_device_samsung_klte" path="device/samsung/klte" remote="khalvat" />
+              <project name="android_device_samsung_klte-common" path="device/samsung/klte-common" remote="khalvat" />
+           
+              <!--Kernel -->
+              <project name="kernel_samsung_msm8974" path="kernel/samsung/msm8974" remote="khalvat" />
+    
+              <!--Vendor -->
+              <project name="vendor_samsung" path="vendor/samsung" remote="khalvat" />
+                  
+           </manifest>
