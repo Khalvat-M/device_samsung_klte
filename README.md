@@ -19,10 +19,10 @@ Rear Camera  | 16 MP, f/2.2, 31mm, phase detection autofocus, LED flash
 Front Camera | 2 MP, f/2.4, 22mm
 Release Date | February 2014
 
-![Galaxy S5](https://github.com/Khalvat-M/android_device_samsung_klte/blob/10.0/information/klte.gif)
+![Galaxy S5](https://github.com/Khalvat-M/android_device_samsung_klte/blob/11.0/information/klte.gif)
 
 
-# For building Android Q
+# For building Android R
 ### create `.repo/local_manifests/roomservice.xml` with the following content:
 
 ***
@@ -32,11 +32,11 @@ Release Date | February 2014
         
            <remote  name="khalvat"
               fetch="https://github.com/Khalvat-M"
-              revision="10.0" />
+              revision="11.0" />
 
            <remote  name="linos"
               fetch="https://github.com/LineageOS"
-              revision="lineage-17.1" />
+              revision="lineage-18.0" />
 
               <!--LineageOS -->
               <project name="android_hardware_samsung" path="hardware/samsung" remote="linos" />
