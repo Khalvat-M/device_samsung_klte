@@ -40,7 +40,6 @@
 using android::base::GetProperty;
 using android::base::ReadFileToString;
 using android::base::Trim;
-using android::init::property_set;
 
 // copied from build/tools/releasetools/ota_from_target_files.py
 // but with "." at the end and empty entry
@@ -114,8 +113,8 @@ void vendor_load_properties()
         }
         property_override("ro.build.description", "klteusc-user 6.0.1 MMB29M G900R4VXS2CQC2 release-keys");
         property_override("ro.build.product", "klteusc");
-        property_set("ro.cdma.home.operator.alpha", "U.S. Cellular");
-        property_set("ro.cdma.home.operator.numeric", "311220");
+        property_override("ro.cdma.home.operator.alpha", "U.S. Cellular");
+        property_override("ro.cdma.home.operator.numeric", "311220");
     } else if (bootloader.find("G900R7") == 0) {
         /* klteacg */
         for (const auto &source : ro_product_props_default_source_order) {
@@ -126,8 +125,8 @@ void vendor_load_properties()
         }
         property_override("ro.build.description", "klteacg-user 6.0.1 MMB29M G900R7WWU3CPL1 release-keys");
         property_override("ro.build.product", "klteacg");
-        property_set("ro.cdma.home.operator.alpha", "U.S. Cellular");
-        property_set("ro.cdma.home.operator.numeric", "310000");
+        property_override("ro.cdma.home.operator.alpha", "U.S. Cellular");
+        property_override("ro.cdma.home.operator.numeric", "310000");
     } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
         for (const auto &source : ro_product_props_default_source_order) {
@@ -148,8 +147,8 @@ void vendor_load_properties()
         }
         property_override("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRU2DQL1 release-keys");
         property_override("ro.build.product", "kltevzw");
-        property_set("ro.cdma.home.operator.alpha", "Verizon");
-        property_set("ro.cdma.home.operator.numeric", "311480");
+        property_override("ro.cdma.home.operator.alpha", "Verizon");
+        property_override("ro.cdma.home.operator.numeric", "311480");
     } else if (bootloader.find("G900W8") == 0) {
         /* kltecan */
         for (const auto &source : ro_product_props_default_source_order) {
@@ -170,8 +169,8 @@ void vendor_load_properties()
         }
         property_override("ro.build.description", "kltetfnvzw-user 4.4.2 KOT49H S902LUDUAOD3 release-keys");
         property_override("ro.build.product", "kltetfnvzw");
-        property_set("ro.cdma.home.operator.alpha", "TracFone");
-        property_set("ro.cdma.home.operator.numeric", "310000");
+        property_override("ro.cdma.home.operator.alpha", "TracFone");
+        property_override("ro.cdma.home.operator.numeric", "310000");
     }
 
     const std::string device = GetProperty("ro.product.device", "");
