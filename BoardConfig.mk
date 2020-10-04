@@ -25,9 +25,6 @@ KLTE_PATH := device/samsung/klte
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_klte_pn547_defconfig
 
-# Fingerprint
-include $(COMMON_PATH)/fingerprint/board.mk
-
 # Init
 TARGET_INIT_VENDOR_LIB := //$(KLTE_PATH):libinit_klte
 TARGET_RECOVERY_DEVICE_MODULES := libinit_klte
