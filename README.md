@@ -26,30 +26,31 @@ Release Date | February 2014
 ### create `.repo/local_manifests/roomservice.xml` with the following content:
 
 ***
- 
-        <?xml version="1.0" encoding="UTF-8"?>
-           <manifest>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+ <manifest>
         
-           <remote  name="khalvat"
-              fetch="https://github.com/Khalvat-M"
-              revision="11.0" />
+ <remote  name="khalvat"
+    fetch="https://github.com/Khalvat-M"
+    revision="11.0" />
 
-           <remote  name="linos"
-              fetch="https://github.com/LineageOS"
-              revision="lineage-18.0" />
+ <remote  name="linos"
+    fetch="https://github.com/LineageOS"
+    revision="lineage-18.0" />
 
-              <!--LineageOS -->
-              <project name="android_hardware_samsung" path="hardware/samsung" remote="linos" />
-              <project name="android_hardware_sony_timekeep" path="hardware/sony/timekeep" remote="linos"/>
+    <!--LineageOS -->
+    <project name="android_hardware_samsung" path="hardware/samsung" remote="linos" />
+    <project name="android_hardware_sony_timekeep" path="hardware/sony/timekeep" remote="linos"/>
         
-              <!--Device -->
-              <project name="android_device_samsung_klte" path="device/samsung/klte" remote="khalvat" />
-              <project name="android_device_samsung_klte-common" path="device/samsung/klte-common" remote="khalvat" />
+    <!--Device -->
+    <project name="android_device_samsung_klte" path="device/samsung/klte" remote="khalvat" />
+    <project name="android_device_samsung_msm8974-common" path="device/samsung/msm8974-common" remote="khalvat" />
            
-              <!--Kernel -->
-              <project name="kernel_samsung_msm8974" path="kernel/samsung/msm8974" remote="khalvat" />
+    <!--Kernel -->
+    <project name="kernel_samsung_msm8974" path="kernel/samsung/msm8974" remote="khalvat" />
     
-              <!--Vendor -->
-              <project name="vendor_samsung" path="vendor/samsung" remote="khalvat" />
+    <!--Vendor -->
+    <project name="vendor_samsung" path="vendor/samsung" remote="khalvat" />
                   
-           </manifest>
+ </manifest>
+```
