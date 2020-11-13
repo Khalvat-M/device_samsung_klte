@@ -26,11 +26,26 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+
+
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    device/samsung/msm8974-common/keylayout/klte/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+    device/samsung/msm8974-common/keylayout/klte/sec_touchkey.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sec_touchkey.kl
+
+
 # Fingerprint
-$(call inherit-product, device/samsung/klte-common/fingerprint/product.mk)
+$(call inherit-product, device/samsung/klte/fingerprint/product.mk)
 
 # NFC
-$(call inherit-product, device/samsung/klte-common/nfc/pn547/product.mk)
+$(call inherit-product, device/samsung/msm8974-common/nfc/pn547/product.mk)
 
-# common klte
-$(call inherit-product, device/samsung/klte-common/klte.mk)
+# common
+$(call inherit-product, device/samsung/msm8974-common/common.mk)
+
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/samsung/klte-common/klte-common-vendor.mk)

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 The Lineage OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,9 +17,11 @@
 
 set -e
 
+# Required!
 export DEVICE=klte
-export DEVICE_COMMON=klte-common
+export DEVICE_COMMON=msm8974-common
 export VENDOR=samsung
 export DEVICE_BRINGUP_YEAR=2014
+
 
 ./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
