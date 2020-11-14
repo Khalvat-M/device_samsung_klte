@@ -40,6 +40,9 @@ TARGET_OTA_ASSERT_DEVICE := klte,klteacg,klteatt,kltecan,kltelra,kltetmo,klteub,
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2411724800		# Dont change it
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12507380736	# Dont change it
 
+# Recovery
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../$(DEVICE_PATH)/recovery/recovery_keys.c
+
 # NFC
 include $(COMMON_PATH)/nfc/pn547/board.mk
 
