@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/klte/klte-vendor.mk)
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
@@ -44,8 +38,9 @@ $(call inherit-product, device/samsung/klte/fingerprint/product.mk)
 # NFC
 $(call inherit-product, device/samsung/msm8974-common/nfc/pn547/product.mk)
 
-# common
-$(call inherit-product, device/samsung/msm8974-common/common.mk)
-
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/klte-common/klte-common-vendor.mk)
+$(call inherit-product, vendor/samsung/klte/klte-vendor.mk)
+$(call inherit-product, vendor/samsung/klte-common/klte-common-vendor.mk)
+
+# msm8974-common
+$(call inherit-product, device/samsung/msm8974-common/common.mk)
