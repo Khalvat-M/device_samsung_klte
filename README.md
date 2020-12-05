@@ -43,8 +43,8 @@ Release Date | February 2014
     <project name="android_hardware_sony_timekeep" path="hardware/sony/timekeep" remote="linos"/>
         
     <!--Device -->
-    <project name="android_device_samsung_klte" path="device/samsung/klte" remote="khalvat" />
-    <project name="android_device_samsung_msm8974-common" path="device/samsung/msm8974-common" remote="khalvat" />
+    <project name="device_samsung_klte" path="device/samsung/klte" remote="khalvat" />
+    <project name="device_samsung_msm8974-common" path="device/samsung/msm8974-common" remote="khalvat" />
            
     <!--Kernel -->
     <project name="kernel_samsung_msm8974" path="kernel/samsung/msm8974" remote="khalvat" />
