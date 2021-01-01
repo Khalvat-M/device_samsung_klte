@@ -17,11 +17,8 @@
 
 set -e
 
-# Required!
 export DEVICE=klte
 export DEVICE_COMMON=msm8974-common
 export VENDOR=samsung
-export DEVICE_BRINGUP_YEAR=2014
 
-
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+"./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
