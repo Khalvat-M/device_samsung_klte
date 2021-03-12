@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +14,11 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_kltexx.mk
+    $(LOCAL_DIR)/lineage_klte.mk
 
 
 
 COMMON_LUNCH_CHOICES := \
-    lineage_kltexx-user \
-    lineage_kltexx-userdebug \
-    lineage_kltexx-eng
+    lineage_klte-user \
+    lineage_klte-userdebug \
+    lineage_klte-eng
