@@ -1,4 +1,4 @@
-# Samsung Package Version:  G9006VZNS1CRH1_G9006VCHU1CRH1
+# Samsung Package Version:  G900FXXU1CSA1_G900FVIA1CSC1_VIA
 
 # Activity recognition
 vendor/lib/libsensor1.so
@@ -28,7 +28,7 @@ vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so
 
-# Bluetooth firmware - Pinned to  G9006VZNS1CRH1_G9006VCHU1CRH1
+# Bluetooth firmware - Pinned to  G900FXXU1CSA1_G900FVIA1CSC1_VIA
 vendor/bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 vendor/firmware/bcm4350_V0395.0797.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
@@ -210,7 +210,7 @@ etc/firmware/cpp_firmware_v1_2_0.fw:vendor/firmware/cpp_firmware_v1_2_0.fw
 # Perf
 vendor/lib/libqti-perfd-client.so
 
-# Qualcomm Framework G9006VZNS1CRH1_G9006VCHU1CRH1
+# Qualcomm Framework G900FXXU1CSA1_G900FVIA1CSC1_VIA
 lib/libperipheral_client.so:vendor/lib/libperipheral_client.so
 
 # Qualcomm framework (from Bacon Marshmallow latest blobs)

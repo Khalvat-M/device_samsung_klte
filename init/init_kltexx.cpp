@@ -1,5 +1,5 @@
 /*
-   Copyright (c) 2020, The LineageOS Project. All rights reserved.
+   Copyright (c) 2021, The LineageOS Project. All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -172,6 +172,88 @@ void vendor_load_properties()
         property_override("ro.build.product", "kltetfnvzw");
         property_override("ro.cdma.home.operator.alpha", "TracFone");
         property_override("ro.cdma.home.operator.numeric", "310000");
+    } else if (bootloader.find("G900K") == 0) {
+         /* kltektt - KT Corp (formerly Korea Telecom) */
+        for (const auto &source : ro_product_props_default_source_order) {
+            set_ro_product_prop(source, "fingerprint", "samsung/kltektt/kltektt:6.0.1/MMB29M/G900KKTU1CPL5:user/release-keys");
+            set_ro_product_prop(source, "device", "kltektt");
+            set_ro_product_prop(source, "model", "SM-G900K");
+            set_ro_product_prop(source, "name", "kltektt");
+        }
+        property_override("ro.build.description", "kltektt-user 6.0.1 MMB29M G900KKTU1CPL5 release-keys");
+        property_override("ro.build.product", "kltektt");
+    } else if (bootloader.find("G900L") == 0) {
+        /* kltelgt - LG Uplus */
+        for (const auto &source : ro_product_props_default_source_order) {
+            set_ro_product_prop(source, "fingerprint", "samsung/kltelgt/kltelgt:6.0.1/MMB29M/G900LKLU1CPL5:user/release-keys");
+            set_ro_product_prop(source, "device", "kltelgt");
+            set_ro_product_prop(source, "model", "SM-G900L");
+            set_ro_product_prop(source, "name", "kltelgt");
+        }
+        property_override("ro.build.description", "kltelgt-user 6.0.1 MMB29M G900LKLU1CPL5 release-keys");
+        property_override("ro.build.product", "kltelgt");
+    } else if (bootloader.find("G900S") == 0) {
+        /* klteskt - SK Telecom */
+        for (const auto &source : ro_product_props_default_source_order) {
+            set_ro_product_prop(source, "fingerprint", "samsung/klteskt/klteskt:6.0.1/MMB29M/G900SKSU1CPL5:user/release-keys");
+            set_ro_product_prop(source, "device", "klteskt");
+            set_ro_product_prop(source, "model", "SM-G900S");
+            set_ro_product_prop(source, "name", "klteskt");
+        }
+        property_override("ro.build.description", "klteskt-user 6.0.1 MMB29M G900SKSU1CPL5 release-keys");
+        property_override("ro.build.product", "klteskt");
+    } else if (bootloader.find("G900V") == 0) {
+         /* kltevzw - SM-G900V - Verizon */
+        for (const auto &source : ro_product_props_default_source_order) {
+            set_ro_product_prop(source, "fingerprint", "Verizon/kltevzw/kltevzw:6.0.1/MMB29M/G900VVRS2DQB2:user/release-keys");
+            set_ro_product_prop(source, "device", "kltevzw");
+            set_ro_product_prop(source, "model", "SM-G900V");
+            set_ro_product_prop(source, "name", "kltevzw");
+        }
+        property_override("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRS2DQB2 release-keys");
+        property_override("ro.build.product", "kltevzw");
+        property_override("ro.cdma.home.operator.alpha", "Verizon");
+        property_override("ro.cdma.home.operator.numeric", "311480");
+    } else if (bootloader.find("G870F") == 0) {
+        /* klteactivexx */
+        for (const auto &source : ro_product_props_default_source_order) {
+            set_ro_product_prop(source, "fingerprint", "samsung/klteactivexx/klteactive:5.0/LRX21T/G870FXXU1BQE1:user/release-keys");
+            set_ro_product_prop(source, "device", "klteactivexx");
+            set_ro_product_prop(source, "model", "SM-G870F");
+            set_ro_product_prop(source, "name", "klteactivexx");
+        }
+        property_override("ro.build.description", "klteactivexx-user 5.0 LRX21T G870FXXU1BQE1 release-keys");
+        property_override("ro.build.product", "klteactivexx");
+    } else if (bootloader.find("G870A") == 0) {
+        /* klteattactive */
+        for (const auto &source : ro_product_props_default_source_order) {
+            set_ro_product_prop(source, "fingerprint", "samsung/klteattactive/klteattactive:6.0.1/MMB29M/G870AUCS2DPK7:user/release-keys");
+            set_ro_product_prop(source, "device", "klteattactive");
+            set_ro_product_prop(source, "model", "SM-G870A");
+            set_ro_product_prop(source, "name", "klteattactive");
+        }
+        property_override("ro.build.description", "klteattactive-user 6.0.1 MMB29M G870AUCS2DPK7 release-keys");
+        property_override("ro.build.product", "klteattactive");
+    } else if (bootloader.find("G9006V") == 0) {
+      /* kltezn */
+        for (const auto &source : ro_product_props_default_source_order) {
+            set_ro_product_prop(source, "fingerprint", "samsung/kltezn/klte:6.0.1/MMB29M/G9006VZNS1CRH1:user/release-keys");
+            set_ro_product_prop(source, "device", "klte");
+            set_ro_product_prop(source, "model", "SM-G9006V");
+            set_ro_product_prop(source, "name", "kltechn");
+        }
+        property_override("ro.build.description", "kltezn-user 6.0.1 MMB29M G9006VZNS1CRH1 release-keys");
+        property_override("ro.build.product", "klte");
+    } else if (bootloader.find("G9008V") == 0) {
+        /* kltezm */
+        for (const auto &source : ro_product_props_default_source_order) {
+            set_ro_product_prop(source, "fingerprint", "samsung/kltezm/klte:6.0.1/MMB29M/G9008VZMU1CQA1:user/release-keys");
+            set_ro_product_prop(source, "device", "klte");
+            set_ro_product_prop(source, "model", "SM-G9008V");
+            set_ro_product_prop(source, "name", "kltechn");
+        }
+        property_override("ro.build.description", "kltezm-user 6.0.1 MMB29M G9008VZMU1CQA1 release-keys");
+        property_override("ro.build.product", "klte");
     }
 
     const std::string device = GetProperty("ro.product.device", "");
