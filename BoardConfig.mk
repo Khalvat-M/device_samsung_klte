@@ -24,7 +24,7 @@ BOARD_CUSTOM_BT_CONFIG := $(DEVICE_PATH)/bluetooth/vnd_klte.txt
 BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 
 # Build Fingerprint
-BUILD_FINGERPRINT := samsung/kltexx/klte:6.0.1/MMB29M/G900FXXU1CRH1:user/release-keys
+BUILD_FINGERPRINT := samsung/kltexx/klte:6.0.1/MMB29M/G900FXXU1CSA1:user/release-keys
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_klte_pn547_defconfig
