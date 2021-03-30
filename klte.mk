@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -39,8 +39,7 @@ $(call inherit-product, device/samsung/klte/fingerprint/product.mk)
 $(call inherit-product, device/samsung/msm8974-common/nfc/pn547/product.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/klte/klte-vendor.mk)
-$(call inherit-product, vendor/samsung/klte-common/klte-common-vendor.mk)
+$(call inherit-product, vendor/samsung/kltexx/kltexx-vendor.mk)
 
 # msm8974-common
 $(call inherit-product, device/samsung/msm8974-common/common.mk)
