@@ -33,6 +33,9 @@ TARGET_KERNEL_CONFIG := lineage_klte_pn547_defconfig
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_klte
 TARGET_RECOVERY_DEVICE_MODULES := libinit_klte
 
+# Manifests
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := klte,klteacg,klteatt,kltecan,kltelra,kltetmo,klteub,klteusc,kltevzw,kltexx
 
@@ -48,3 +51,6 @@ include $(COMMON_PATH)/nfc/pn547/board.mk
 
 # inherit from the proprietary version
 include vendor/samsung/kltexx/BoardConfigVendor.mk
+
+# inherit from the proprietary version
+include vendor/samsung/msm8974-common/BoardConfigVendor.mk
