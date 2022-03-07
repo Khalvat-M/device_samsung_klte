@@ -27,6 +27,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/klte/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(COMMON_PATH)/audio/klte/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
+# Display Device Config
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/displayconfig/klte/display_id_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_0.xml
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/keylayout/klte/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
