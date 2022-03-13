@@ -1,4 +1,4 @@
-Copyright 2020 - The Khalvat-M project
+Copyright 2022 - The Khalvat-M project
 
 Device configuration for Samsung Galaxy S5 Unified variants (SM-G900F, SM-G900M, SM-G900R4, SM-G900R7, SM-G900T, SM-G900V, SM-G900W8, SM-S902L).
 ========================================
@@ -19,10 +19,10 @@ Rear Camera  | 16 MP, f/2.2, 31mm, phase detection autofocus, LED flash
 Front Camera | 2 MP, f/2.4, 22mm
 Release Date | February 2014
 
-![Galaxy S5](https://github.com/Khalvat-M/android_device_samsung_klte/blob/11.0/information/klte.gif)
+![Galaxy S5](https://github.com/Khalvat-M/android_device_samsung_klte/blob/12.1/information/klte.gif)
 
 
-# For building Android R
+# For building Android 12.1
 ### create `.repo/local_manifests/roomservice.xml` with the following content:
 
 ***
@@ -32,11 +32,11 @@ Release Date | February 2014
         
  <remote  name="khalvat"
     fetch="https://github.com/Khalvat-M"
-    revision="11.0" />
+    revision="12.1" />
 
  <remote  name="linos"
     fetch="https://github.com/LineageOS"
-    revision="lineage-18.1" />
+    revision="lineage-19.1" />
 
     <!--LineageOS -->
     <project name="android_hardware_samsung" path="hardware/samsung" remote="linos" />
