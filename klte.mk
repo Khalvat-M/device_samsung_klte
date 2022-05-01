@@ -31,14 +31,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/displayconfig/klte/display_id_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_0.xml
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service \
+    fingerprint.msm8974
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/keylayout/klte/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
     $(COMMON_PATH)/keylayout/klte/sec_touchkey.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sec_touchkey.kl
-
-
-# Fingerprint
-$(call inherit-product, device/samsung/klte/fingerprint/product.mk)
 
 # NFC
 $(call inherit-product, device/samsung/msm8974-common/nfc/pn547/product.mk)
