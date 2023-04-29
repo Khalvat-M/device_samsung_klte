@@ -36,7 +36,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_klte
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := klte,klteacg,klteatt,kltecan,kltelra,kltetmo,klteub,klteusc,kltevzw,kltexx
+TARGET_OTA_ASSERT_DEVICE := klte,klteacg,klteatt,kltecan,kltelra,kltetmo,klteub,klteusc,kltevzw,klteaio,kltetfnvzw,kltexx
 
 # Partition
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2411724800		# Dont change it
